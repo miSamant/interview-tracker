@@ -1,8 +1,8 @@
-// 1. Swap npm names with native production browser CDN paths
-import { initializeApp } from "https://gstatic.com";
-import { getAnalytics } from "https://gstatic.com";
-import { getAuth } from "https://gstatic.com";
-import { getFirestore } from "https://gstatic.com";
+
+import { initializeApp } from "https://www.gstatic.com";
+import { getAnalytics } from "https://www.gstatic.com";
+import { getAuth } from "https://www.gstatic.com";
+import { getFirestore } from "https://www.gstatic.com";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAfZb8LNHaI8UVvQFNAChwvRxyYrxC8At0",
@@ -14,12 +14,12 @@ const firebaseConfig = {
   measurementId: "G-NRZW4L15QH"
 };
 
-// 2. Initialize your services
+// Initialize your services
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
-// 3. Export them globally so your other main script files can read them seamlessly
+// Share them with your login scripts globally
 window.auth = auth;
 window.db = db;
