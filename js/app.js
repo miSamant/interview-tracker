@@ -1,4 +1,5 @@
-import { firebaseConfig } from "./firebase-config.js";
+import { firebaseConfig } from "./firebase-config.js"; 
+
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import {
   getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged,
@@ -13,6 +14,17 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 const provider = new GoogleAuthProvider();
+
+
+export const firebaseConfig = {
+  apiKey: "AIzaSyAfZb8LNHaI8UVvQFNAChwvRxyYrxC8At0",
+  authDomain: "://firebaseapp.com",
+  projectId: "interview-tracker-58159",
+  storageBucket: "interview-tracker-58159.firebasestorage.app",
+  messagingSenderId: "545427084344",
+  appId: "1:545427084344:web:7af340b8b2990a0d5e42cd",
+  measurementId: "G-NRZW4L15QH"
+};
 
 // ---------- State ----------
 let currentUser = null;
