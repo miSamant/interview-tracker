@@ -1,9 +1,11 @@
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
-import { initializeApp } from "https://www.gstatic.com";
-import { getAnalytics } from "https://www.gstatic.com";
-import { getAuth } from "https://www.gstatic.com";
-import { getFirestore } from "https://www.gstatic.com";
-
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyAfZb8LNHaI8UVvQFNAChwvRxyYrxC8At0",
   authDomain: "interview-tracker-58159.firebaseapp.com",
@@ -14,12 +16,6 @@ const firebaseConfig = {
   measurementId: "G-NRZW4L15QH"
 };
 
-// Initialize your services
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-const auth = getAuth(app);
-const db = getFirestore(app);
-
-// Share them with your login scripts globally
-window.auth = auth;
-window.db = db;
